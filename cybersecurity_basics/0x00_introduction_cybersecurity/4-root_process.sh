@@ -1,2 +1,2 @@
 #!/bin/bash
-ps -u "$1" -eo pid,vsz,rss,cmd --sort=pid | grep -v " 0 0 " 
+ps aux | grep "^$1" | awk '$5 != 0 && $6 != 0' 

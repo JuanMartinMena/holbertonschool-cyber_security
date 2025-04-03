@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$(sha256sum $1 | awk '{ print $1 }')" == "$2" && echo "$1: OK" || echo "$1: NOP"
+echo "$2  $1" > /tmp/hash_check.txt && sha256sum -c /tmp/hash_check.txt && echo "$1: OK" || echo "$1: Not The Same"

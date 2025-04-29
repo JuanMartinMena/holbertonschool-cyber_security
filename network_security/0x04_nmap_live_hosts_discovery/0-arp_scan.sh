@@ -1,0 +1,1 @@
+sudo nmap -sn -PR "$SUBNET"

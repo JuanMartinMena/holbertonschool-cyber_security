@@ -18,4 +18,4 @@ for (( i=0; i<${#decoded}; i++ )); do
     escapes+=$(printf '\\x%02x' "$xr")
 done
 
-echo -n -e "$escapes"
+printf '%b' "$escapes"

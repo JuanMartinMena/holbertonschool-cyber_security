@@ -1,2 +1,2 @@
 #!/bin/bash
-chown user3 "$1"/* --from=user2
+find "$1" -type f -user user2 -exec chown user3 {} +

@@ -1,2 +1,2 @@
 #!/bin/bash
-grep -Ei 'com2sec|rocommunity' /etc/snmp/snmpd.conf
+grep -i 'public' /etc/snmp/snmpd.conf 2>/dev/null
